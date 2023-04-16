@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Ustawienia połączenia z bazą danych -->
+        <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
+        <property name="hibernate.connection.url">jdbc:sqlite:/C:/Users/micha/Desktop/sqlite/sqlite-dll-win64-x64-3410200/db.db</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLiteDialect</property>
+        <property name="hibernate.app.MyApp">thread</property>
+
+
+        <!-- Mapowanie klas encji na tabele -->
+        <mapping class="tables.Cennik"/>
+        <mapping class="tables.DokonaneWplaty"/>
+        <mapping class="tables.Instalacja"/>
+        <mapping class="tables.Klient"/>
+        <mapping class="tables.NaliczoneNaleznosci"/>
+    </session-factory>
+</hibernate-configuration>
